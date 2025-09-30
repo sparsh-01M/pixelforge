@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-gold: #D4AF37;
+    --color-gold-light: #F4E4B8;
+    --color-gold-dark: #B8941F;
+    --color-navy: #1A2332;
+    --color-burgundy: #800020;
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-gray-light: #F5F5F5;
+    --color-gray: #9CA3AF;
+  }
+
+  * {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-black text-white antialiased;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl lg:text-7xl leading-tight;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
+  }
+
+  h3 {
+    @apply text-3xl md:text-4xl leading-snug;
+  }
+
+  h4 {
+    @apply text-2xl md:text-3xl leading-snug;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-semibold px-8 py-4 rounded-full
+    transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/50
+    active:scale-95 inline-flex items-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-yellow-600 text-yellow-600 font-semibold px-8 py-4 rounded-full
+    transition-all duration-300 hover:bg-yellow-600 hover:text-black hover:scale-105
+    active:scale-95 inline-flex items-center gap-2;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  .gradient-gold {
+    @apply bg-gradient-to-br from-yellow-600 via-yellow-500 to-yellow-600;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-yellow-600 via-yellow-400 to-yellow-600 bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10;
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
